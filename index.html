@@ -2,53 +2,895 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Hisyam</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600,800" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/gh/hisyamasr/assets_cdn@v.1.2/mdb/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/gh/hisyamasr/assets_cdn@v.1.2/mdb/css/mdb.min.css" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="https://cdn.jsdelivr.net/gh/hisyamasr/assets_cdn@v.1.2/mdb/css/style.css" rel="stylesheet">
+
     <style>
-        body {
-            text-align: center;
-            padding: 150px;
-        }
-
-        h1 {
-            font-size: 50px;
+        html,
+        body,
+        header,
+        .jarallax_home {
+            height: 100%;
         }
 
         body {
-            font: 20px Helvetica, sans-serif;
-            color: #333;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        article {
+
+
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            z-index: 99;
+            height: 100%;
+        }
+
+        #status {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-image: url(preloader.gif);
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: -100px 0 0 -100px;
+        }
+
+        .h1_name {
+            text-shadow: 3px 8px #685959;
+        }
+
+        /* Icon 1 */
+
+        .animated-icon1,
+        .animated-icon2,
+        .animated-icon3 {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            margin: 0px;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .5s ease-in-out;
+            -moz-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .animated-icon1 span,
+        .animated-icon2 span,
+        .animated-icon3 span {
             display: block;
-            text-align: left;
-            width: 650px;
-            margin: 0 auto;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
         }
 
-        a {
-            color: #dc8100;
-            text-decoration: none;
+        .animated-icon1 span {
+            background: #e65100;
         }
 
-        a:hover {
-            color: #333;
-            text-decoration: none;
+        .animated-icon2 span {
+            background: #e3f2fd;
+        }
+
+        .animated-icon3 span {
+            background: #f3e5f5;
+        }
+
+        .animated-icon1 span:nth-child(1) {
+            top: 0px;
+        }
+
+        .animated-icon1 span:nth-child(2) {
+            top: 10px;
+        }
+
+        .animated-icon1 span:nth-child(3) {
+            top: 20px;
+        }
+
+        .animated-icon1.open span:nth-child(1) {
+            top: 11px;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        .animated-icon1.open span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+
+        .animated-icon1.open span:nth-child(3) {
+            top: 11px;
+            -webkit-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            -o-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
+
+        /* Icon 3*/
+
+        .animated-icon2 span:nth-child(1) {
+            top: 0px;
+        }
+
+        .animated-icon2 span:nth-child(2),
+        .animated-icon2 span:nth-child(3) {
+            top: 10px;
+        }
+
+        .animated-icon2 span:nth-child(4) {
+            top: 20px;
+        }
+
+        .animated-icon2.open span:nth-child(1) {
+            top: 11px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .animated-icon2.open span:nth-child(2) {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .animated-icon2.open span:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .animated-icon2.open span:nth-child(4) {
+            top: 11px;
+            width: 0%;
+            left: 50%;
+        }
+
+        /* Icon 4 */
+
+        .animated-icon3 span:nth-child(1) {
+            top: 0px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+
+        .animated-icon3 span:nth-child(2) {
+            top: 10px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+
+        .animated-icon3 span:nth-child(3) {
+            top: 20px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+
+        .animated-icon3.open span:nth-child(1) {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            top: 0px;
+            left: 8px;
+        }
+
+        .animated-icon3.open span:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+        }
+
+        .animated-icon3.open span:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            top: 21px;
+            left: 8px;
+        }
+
+        .jarallax {
+            min-height: 30vh;
         }
     </style>
+
+
 </head>
+<div id="preloader">
+    <div id="status"></div>
+</div>
 
-<body>
+<body class="developer">
 
-    <article>
-        <h1>We&rsquo;ll be back soon!</h1>
-        <div>
-            <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. we&rsquo;ll be
-                back online shortly!</p>
-            <p>&mdash; Hisyam | HBSA Teams</p>
+    <!--Navigation & Intro-->
+    <header>
+
+        <!-- Navbar -->
+        <nav class="d-none indigo navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img height="30px" width="30px" src="logo.png" alt="logo"></a>
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_1"
+                    aria-controls="navbar_1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#navbar_1"
+                    aria-controls="navbar_1" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon3"><span></span><span></span><span></span></div>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar_1">
+                    <ul class="navbar-nav mr-auto smooth-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-offset="100">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills" data-offset="75">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#works" data-offset="100">Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" data-offset="100">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Social Icon  -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/hisyambsa"><i
+                                    class="fab fa-github light-green-text-2"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/hisyambsa"><i
+                                    class="fab fa-linkedin light-green-text-2"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/hisyambsa"><i
+                                    class="fab fa-instagram light-green-text-2"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Intro Section -->
+        <div id="home" class="view jarallax_home" data-jarallax='{"speed": 0.2}'
+            style="background-image: url('https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="mask morpheus-den-gradient">
+                <div class="container h-100 d-flex justify-content-center align-items-center">
+                    <div class="row smooth-scroll">
+                        <div class="col-md-12 pt-3">
+                            <div class="white-text text-center pt-5 animated flipInX slower delay-1s">
+                                <h1
+                                    class="h1_name slower text-capitalize text-monospace font-weight-bold view overlay display-2 mb-4 wow fadeIn">
+                                    <strong>Hisyam</strong>
+                                </h1>
+                                <h5 class="text-uppercase font-weight-bold wow fadeIn" data-wow-delay="0.4s">
+                                    <mark>Web-Apps
+                                        developer & that's it</mark></h5>
+                                <a href="#about" class="btn btn-floating btn-unique btn-large wow fadeIn"
+                                    data-wow-delay="0.4s" data-offset="100"><i class="fas fa-angle-down"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </article>
+
+    </header>
+    <!--/Navigation & Intro-->
+
+    <!--Main layout-->
+    <main>
+
+        <!-- First container -->
+        <div class="container">
+
+            <!-- Section About -->
+            <section id="about" class="section feature-box mb-5">
+
+                <!-- Section title -->
+                <h2 class="text-center text-uppercase mt-5 pt-0 wow fadeIn" data-wow-duration="3s"
+                    data-wow-delay="0.2s">About
+                    <strong>me</strong></h2>
+
+                <p class="text-center w-responsive mx-auto wow fadeIn mb-5" data-wow-duration="3s"
+                    data-wow-delay="0.2s">Seniman yang otaknya tidak pernah diam <br> selalu belajar hal baru <br>
+                    selagi
+                    diberi
+                    waktu dan mau. <br> <strong>semua akan menjadi <i>Bisa</i></strong> </p>
+
+                <!-- First row -->
+                <div class="card-deck features-big text-center">
+
+                    <!-- First column -->
+                    <div class="card col-md-4 mb-5 wow zoomIn" data-wow-duration="3s" data-wow-delay="0.4s">
+
+                        <!--Panel-->
+                        <div class=" card-body rgba-red-slight">
+                            <i class="fas fa-laptop fa-3x mb-4" aria-hidden="true"></i>
+                            <h5 class="font-weight-bold text-uppercase mb-4">Freelancer</h5>
+                            <p class="black-text">mengisi waktu luang, mengerjakan proyek pasti
+                                selesai dan tidak
+                                bisa
+                                diberikan deadline</p>
+                        </div>
+                        <!--/.Panel-->
+
+                    </div>
+                    <!-- /First column -->
+
+                    <!-- Second column -->
+                    <div class="card col-md-4 mb-5 wow zoomIn" data-wow-duration="3s" data-wow-delay="0.6s">
+
+                        <!--Panel-->
+                        <div class=" card-body rgba-green-slight">
+                            <i class="fas fa-code fa-3x mb-4" aria-hidden="true"></i>
+                            <h5 class="font-weight-bold text-uppercase mb-4">Developer</h5>
+                            <p class="black-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <!--/.Panel-->
+
+                    </div>
+                    <!-- /.Second column -->
+
+                    <!-- Third column -->
+                    <div class="card col-md-4 mb-5 wow zoomIn" data-wow-duration="3s" data-wow-delay="0.8s">
+
+                        <!--Panel-->
+                        <div class=" card-body rgba-blue-slight">
+                            <i class="fas fa-pencil-alt fa-3x mb-4" aria-hidden="true"></i>
+                            <h5 class="font-weight-bold text-uppercase mb-4">Designer</h5>
+                            <p class="black-text">Perancangan aplikasi, berkaitan dengan analisa kebutuhan pengguna
+                            </p>
+                        </div>
+                        <!--/.Panel-->
+
+                    </div>
+                    <!-- /.Third column -->
+
+                </div>
+                <!-- /.First row -->
+
+            </section>
+            <!-- /.Second section -->
+
+        </div>
+        <!-- /.First container -->
+
+        <!--Second container-->
+        <div class="container-fluid" style="background-color: #f3f3f5;">
+            <div class="container py-4 pt-4">
+
+                <!-- Second section -->
+                <section id="skills">
+
+                    <!-- First row -->
+                    <div class="row py-5">
+
+                        <!--First column-->
+                        <div class="col-lg-6 col-md-12 mb-3 wow fadeIn" data-wow-duration="3s" data-wow-delay="0.4s">
+
+                            <!--Section heading-->
+                            <div class="d-flex justify-content-start">
+                                <h4 class="text-center text-uppercase mb-5 pb-3 mt-4 wow fadeIn" data-wow-duration="3s"
+                                    data-wow-delay="0.2s">
+                                    My <strong>experience</strong></h4>
+                            </div>
+
+                            <!--Description-->
+                            <blockquote class="blockquote bq-warning mb-4">
+                                <div class="row"> <i class="fas fa-briefcase fa-x mb-1 mr-3 ml-3"
+                                        aria-hidden="true"></i>
+                                    <h5 class="font-weight-bold mb-3">Staff Sistem Informasi</h5>
+                                </div>
+                                <p class="font-weight-bold ml-1 dark-grey-text mb-2">Juni, 2020 - Present </p>
+                                <p class="mb-0 ml-1 light-grey-text">Divisi SDM & Umum, pembuatan aplikasi untuk
+                                    mempermudah kegiatan dalam Divisi</p>
+                            </blockquote>
+
+                            <blockquote class="blockquote bq-warning mt-1 mb-4">
+                                <div class="row"> <i class="fas fa-briefcase fa-x mb-1 mr-3 ml-3"
+                                        aria-hidden="true"></i>
+                                    <h5 class="font-weight-bold mb-3">Tenaga Harian Lepas</h5>
+                                </div>
+                                <p class="font-weight-bold ml-1 dark-grey-text mb-2">Aug, 2019 - Mei, 2020</p>
+                                <p class="mb-0 ml-1 light-grey-text">Divisi SDM & Umum, membantu hal yang berkaitan
+                                    dengan sistem informasi dan Humas </p>
+                            </blockquote>
+
+                            <blockquote class="blockquote bq-warning">
+                                <div class="row"> <i class="fas fa-briefcase fa-x mb-1 mr-3 ml-3"
+                                        aria-hidden="true"></i>
+                                    <h5 class="font-weight-bold mb-3">Magang</h5>
+                                </div>
+                                <p class="font-weight-bold ml-1 dark-grey-text mb-2"><strong>Feb, 2019 - Aug,
+                                        2019</strong></p>
+                                <p class="mb-0 ml-1 light-grey-text">Melihat langsung masalah yang terjadi di lapangan
+                                    yang berkaitan dengan sistem informasi</p>
+                            </blockquote>
+
+                        </div>
+                        <!--/First column-->
+
+                        <!--Second column-->
+                        <div class="col-lg-5 offset-lg-1 col-md-12 mb-4 wow fadeIn" data-wow-duration="3s"
+                            data-wow-delay="0.4s">
+
+                            <!--Second heading-->
+                            <div class="d-flex justify-content-start">
+                                <h4 class="text-center text-uppercase mb-5 pb-3 mt-4 wow fadeIn" data-wow-duration="3s"
+                                    data-wow-delay="0.2s">
+                                    Development <strong>Skills</strong></h4>
+                            </div>
+
+                            <!--Description-->
+                            <p class="black-text text-uppercase font-weight-bold" align="justify">Jquery</p>
+                            <div class="md-progress">
+                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <p class="black-text text-uppercase font-weight-bold pt-3" align="justify">RDBMS query
+                            </p>
+                            <div class="md-progress">
+                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="black-text text-uppercase font-weight-bold pt-3" align="justify">Bootstrap</p>
+                            <div class="md-progress">
+                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="black-text text-uppercase font-weight-bold pt-3" align="justify">CodeIgniter</p>
+                            <div class="md-progress">
+                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+
+                            <p class="black-text text-uppercase font-weight-bold pt-3" align="justify">PHP</p>
+                            <div class="md-progress">
+                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <p class="black-text text-uppercase font-weight-bold pt-3" align="justify">CSS</p>
+                            <div class="md-progress">
+                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <p class="black-text text-uppercase font-weight-bold pt-3" align="justify">Cpanel</p>
+                            <div class="md-progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+
+                        </div>
+                        <!--/Second column-->
+
+                    </div>
+                    <!--/First row-->
+
+                </section>
+                <!-- /.Second section -->
+
+            </div>
+        </div>
+        <!--/Second container-->
+
+        <!-- Third container -->
+        <div class="container">
+
+            <!-- Section About -->
+            <section class="section feature-box my-5 pb-5">
+
+                <!-- Section title -->
+                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-duration="3s"
+                    data-wow-delay="0.2s">Proses pengembangan Aplikasi</strong></h2>
+                <p class="text-center w-responsive mx-auto wow fadeIn my-5" data-wow-duration="3s"
+                    data-wow-delay="0.2s"> Banyak jenis tahapan untuk proses pengembangan aplikasi. Jenis tahapan
+                    juga tergantung dari aplikasi yang akan dibuat. Tahapan berikut adalah yang biasa saya gunakan dan
+                    yang paling sederhana. </p>
+
+                <!-- Nav tabs -->
+                <ul class="nav md-tabs nav-justified indigo" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">Analisa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Desain</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">Implementasi</a>
+                    </li>
+                </ul>
+                <!-- Tab panels -->
+                <div class="tab-content card text-justify">
+                    <!--Panel 1-->
+                    <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+                        <br>
+                        <div class="row mt-2">
+                            <div class="col-2 text-center"> <i class="fas fa-search fa-3x mb-1 grey-text"
+                                    aria-hidden="true"></i> </div>
+                            <div class="col-9 mb-2">
+                                <p class="dark-grey-text">Analisa kebutuhan pengguna. meliputi jenis server yang
+                                    digunakan, fitur aplikasi, biaya yang dikeluarkan hingga pemeliharaannya
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Panel 1-->
+
+                    <!--Panel 2-->
+                    <div class="tab-pane fade" id="panel2" role="tabpanel">
+                        <br>
+                        <div class="row mt-2">
+                            <div class="col-2 text-center"> <i class="fas fa-pencil-alt fa-3x mb-1 grey-text"
+                                    aria-hidden="true"></i> </div>
+                            <div class="col-9 mb-2">
+                                <p class="dark-grey-text">Desain aplikasi adalah tahapan melihat aplikasi yang akan
+                                    digunakan pengguna. Desain dapat terdiri mockup atau prototype langsung dalam bentuk
+                                    aplikasi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Panel 2-->
+
+                    <!--Panel 3-->
+                    <div class="tab-pane fade" id="panel3" role="tabpanel">
+                        <br>
+                        <div class="row mt-2">
+                            <div class="col-2 text-center"> <i class="fas fa-code fa-3x mb-1 grey-text"
+                                    aria-hidden="true"></i> </div>
+                            <div class="col-9 mb-2">
+                                <p class="dark-grey-text">Tahapan ini adalah membangun aplikasi sesuai dengan desain dan
+                                    kebutuhan pengguna.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Panel 3-->
+                </div>
+                <!-- /.Tab panels -->
+            </section>
+            <!-- /.Section -->
+
+        </div>
+        <!-- /.Third container -->
+
+        <!-- Streak -->
+        <div class="streak-md view jarallax" style="height: 20vh!important;">
+            <img class="jarallax-img"
+                src="https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="jarallax-img" height="20vh">
+            <div class="mask flex-center rgba-indigo-strong">
+                <div class="text-center white-text smooth-scroll mx-4">
+                    <h3 class="h3-responsive wow fadeIn mb-5">
+                        <i class="fas fa-quote-left" aria-hidden="true"></i>&nbsp;
+                        A program is never less than 90% complete, and never more than 95% complete.
+                        &nbsp;<i class="fas fa-quote-right" aria-hidden="true"></i>
+                    </h3>
+                    <h5 class="font-italic wow fadeIn" data-wow-duration="3s" data-wow-delay="0.2s">~ Terry Baker
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <!-- /.Streak -->
+
+        <!-- Fourth container -->
+        <div class="container d-none">
+
+            <!-- Fourth section -->
+            <section id="works" class="section mb-5">
+
+                <!-- Section title -->
+                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-duration="3s"
+                    data-wow-delay="0.2s">My
+                    <strong>projects</strong></h2>
+
+                <!-- Section description -->
+                <p class="text-center w-responsive mx-auto wow fadeIn my-5">Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Quia iste provident, voluptatum voluptatibus aut modi aspernatur autem impedit,
+                    eius, debitis earum voluptatem. Quaerat hic aspernatur laborum magni earum. At, officiis!</p>
+
+                <!-- First row -->
+                <div class="row wow fadeIn" data-wow-duration="3s" data-wow-delay="0.4s">
+
+                    <!-- First column -->
+                    <div class="col-md-12 mb-5">
+
+                        <!-- Lightbox -->
+                        <div id="mdb-lightbox-ui"></div>
+
+                        <div class="mdb-lightbox">
+
+                            <figure class="col-md-4">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(63).jpg"
+                                    data-size="1600x1067">
+                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(63).jpg"
+                                        class="img-fluid z-depth-1">
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(66).jpg"
+                                    data-size="1600x1067">
+                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(66).jpg"
+                                        class="img-fluid z-depth-1">
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(65).jpg"
+                                    data-size="1600x1067">
+                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(65).jpg"
+                                        class="img-fluid z-depth-1">
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(67).jpg"
+                                    data-size="1600x1067">
+                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+                                        class="img-fluid z-depth-1">
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(68).jpg"
+                                    data-size="1600x1067">
+                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(68).jpg"
+                                        class="img-fluid z-depth-1">
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(64).jpg"
+                                    data-size="1600x1067">
+                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(64).jpg"
+                                        class="img-fluid z-depth-1">
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(69).jpg"
+                                    data-size="1600x1067">
+                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(69).jpg"
+                                        class="img-fluid z-depth-1">
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(59).jpg"
+                                    data-size="1600x1067">
+                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(59).jpg"
+                                        class="img-fluid z-depth-1">
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(70).jpg"
+                                    data-size="1600x1067">
+                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(70).jpg"
+                                        class="img-fluid z-depth-1">
+                                </a>
+                            </figure>
+
+                        </div>
+                        <!-- /.Lightbox -->
+
+                    </div>
+                    <!-- /.First column -->
+
+                </div>
+                <!-- /.First row -->
+
+            </section>
+            <!-- /.Fourth section -->
+
+            <hr>
+
+        </div>
+        <!-- /.Fourth container -->
+
+        <div class="streak1">
+            <div class="flex-center">
+                <ul class="list-unstyled">
+                    <li>
+                        <h2 class="h2-responsive mt-5 wow fadeIn">Want Collaboration or Develop Apps?</h2>
+                    </li>
+                    <li>
+                        <h5 class="h5-responsive wow fadeIn" data-wow-duration="3s" data-wow-delay="0.2s">Just send me a
+                            message! <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=6281905096842">here</a></h5>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- /.Customers carousel -->
+
+    </main>
+    <!--/Main layout-->
+
+    <!-- Scrollspy -->
+    <div class="dotted-scrollspy clearfix d-none d-sm-block">
+        <ul class="nav smooth-scroll flex-column">
+            <li class="nav-item"><a class="nav-link" href="#home"><span></span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#about"><span></span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills"><span></span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#works"><span></span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact"><span></span></a></li>
+        </ul>
+    </div>
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/hisyamasr/assets_cdn@v.1.2/mdb/js/jquery-3.4.1.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script defer type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/hisyamasr/assets_cdn@v.1.2/mdb/js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script defer type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/hisyamasr/assets_cdn@v.1.2/mdb/js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script defer type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/hisyamasr/assets_cdn@v.1.2/mdb/js/mdb.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+    <script defer>
+
+        // initialize lightbox
+        $(function () {
+            $("#mdb-lightbox-ui").load("https://cdn.jsdelivr.net/gh/hisyamasr/assets_cdn@v.1.2/mdb/mdb-addons/mdb-lightbox-ui.html");
+        });
+
+        $('.navbar-collapse a').click(function () {
+            $(".navbar-collapse").collapse('hide');
+        });
+
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.first-button').on('click', function () {
+
+                $('.animated-icon1').toggleClass('open');
+            });
+            $('.second-button').on('click', function () {
+
+                $('.animated-icon2').toggleClass('open');
+            });
+            $('.third-button').on('click', function () {
+
+                $('.animated-icon3').toggleClass('open');
+            });
+
+
+            // object-fit polyfill run
+            objectFitImages();
+
+            /* init Jarallax */
+            jarallax(document.querySelectorAll('.jarallax'));
+
+            jarallax(document.querySelectorAll('.jarallax-keep-img'), {
+                keepImg: true,
+            });
+
+
+
+
+            $('.navbar').removeClass('d-none');
+            $('.navbar').toggle();
+
+            // will first fade out the loading animation
+            $("#status").fadeOut(function () {
+            });
+            // will fade out the whole DIV that covers the website.
+            $("#preloader").delay(1000).fadeOut("slow", function () {
+                // $('.navbar').toggle();
+                $('.navbar').delay(1500).slideToggle('slow');
+            });
+
+
+            /* WOW.js init */
+            new WOW().init();
+            // $(".wow").addClass("mx-5");
+
+            // initialize scrollspy
+            $('body').scrollspy({
+                target: '.dotted-scrollspy',
+            });
+
+        });
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168803324-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-168803324-1');
+    </script>
 </body>
 
 </html>
