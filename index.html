@@ -51,7 +51,9 @@
         }
 
 
-
+        .wow {
+            visibility: hidden;
+        }
 
         #preloader {
             position: fixed;
@@ -328,7 +330,7 @@
                 <div class="container h-100 d-flex justify-content-center align-items-center">
                     <div class="row smooth-scroll">
                         <div class="col-md-12 pt-3">
-                            <div class="white-text text-center pt-5 animated flipInX slower delay-1s">
+                            <div class="white-text text-center pt-5 animated flipInX slower delay-2s">
                                 <h1
                                     class="h1_name slower text-capitalize text-monospace font-weight-bold view overlay display-2 mb-4 wow fadeIn">
                                     <strong>Hisyam</strong>
@@ -396,7 +398,8 @@
                         <div class=" card-body rgba-green-slight">
                             <i class="fas fa-code fa-3x mb-4" aria-hidden="true"></i>
                             <h5 class="font-weight-bold text-uppercase mb-4">Developer</h5>
-                            <p class="black-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p class="black-text">Pengembangan Aplikasi, Fokus dan bertanggung jawab terhadap proyek
+                                yang sedang dikerjakan</p>
                         </div>
                         <!--/.Panel-->
 
@@ -636,11 +639,11 @@
                 alt="jarallax-img" height="20vh">
             <div class="mask flex-center rgba-indigo-strong">
                 <div class="text-center white-text smooth-scroll mx-4">
-                    <h3 class="h3-responsive wow fadeIn mb-5">
+                    <h5 class="h5-responsive wow fadeIn mb-5">
                         <i class="fas fa-quote-left" aria-hidden="true"></i>&nbsp;
                         A program is never less than 90% complete, and never more than 95% complete.
                         &nbsp;<i class="fas fa-quote-right" aria-hidden="true"></i>
-                    </h3>
+                    </h5>
                     <h5 class="font-italic wow fadeIn" data-wow-duration="3s" data-wow-delay="0.2s">~ Terry Baker
                     </h5>
                 </div>
@@ -764,7 +767,7 @@
         </div>
         <!-- /.Fourth container -->
 
-        <div class="streak1">
+        <div class="streak1" id="contact">
             <div class="flex-center">
                 <ul class="list-unstyled">
                     <li>
@@ -783,6 +786,21 @@
 
     </main>
     <!--/Main layout-->
+    <!-- Footer -->
+    <footer class="page-footer font-small special-color-dark">
+        <!-- Copyright -->
+        <div class="footer-copyright px-4 py-3">
+            <div class="row">
+                <div class="col-0 col-md-3">
+
+                </div>
+                <div class="col-12 text-center">
+                    &copy; 2020 alright reserved | Hisyam</div>
+            </div>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
     <!-- Scrollspy -->
     <div class="dotted-scrollspy clearfix d-none d-sm-block">
@@ -864,9 +882,9 @@
             $("#status").fadeOut(function () {
             });
             // will fade out the whole DIV that covers the website.
-            $("#preloader").delay(1000).fadeOut("slow", function () {
+            $("#preloader").delay(500).fadeOut("slow", function () {
                 // $('.navbar').toggle();
-                $('.navbar').delay(1500).slideToggle('slow');
+                $('.navbar').delay(2500).slideToggle('slow');
             });
 
 
