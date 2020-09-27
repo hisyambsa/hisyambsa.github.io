@@ -260,6 +260,12 @@
         .jarallax {
             min-height: 30vh;
         }
+
+
+        .navbar,
+        .pagination .page-item.active .page-link {
+            box-shadow: none;
+        }
     </style>
 
 
@@ -274,7 +280,7 @@
     <header>
 
         <!-- Navbar -->
-        <nav class="d-none indigo navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <nav class="indigo navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container">
                 <a class="navbar-brand" href="#"><img height="30px" width="30px" src="logo.png" alt="logo"></a>
                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_1"
@@ -874,9 +880,23 @@
 
 
 
+            $(window).scroll(function (event) {
+                var x = $(window).height();
+                var y = $(window).scrollTop();
+                console.log(x);
+                console.log(y);
+                if (x < y) {
+                    $('.navbar').slideDown(2000);
+                } else {
+                    $('.navbar').slideUp(1000);
+                }
+                // var scroll = $(window).scrollTop();
+                // Do something
+            });
+            $('.navbar').fadeOut();
 
-            $('.navbar').removeClass('d-none');
-            $('.navbar').toggle();
+            // $('.navbar').removeClass('d-none');
+            // $('.navbar').toggle();
 
             // will first fade out the loading animation
             $("#status").fadeOut(function () {
