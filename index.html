@@ -915,7 +915,7 @@
             $(window).scroll(function (event) {
                 var x = $(window).height();
                 var y = $(window).scrollTop();
-                if (x < y) {
+                if (x < y + 60) {
                     $('.navbar').slideDown(2000);
                 } else {
                     $('.navbar').slideUp(200);
@@ -934,7 +934,7 @@
             // will fade out the whole DIV that covers the website.
             $("#preloader").delay(500).fadeOut("slow", function () {
                 // $('.navbar').toggle();
-                $('.navbar').delay(2500).slideToggle('slow');
+                // $('.navbar').delay(2500).slideToggle('slow');
             });
 
 
