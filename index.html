@@ -25,7 +25,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600,800" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 
@@ -35,8 +38,20 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdn.jsdelivr.net/gh/hisyamasr/assets_cdn@v.1.2/mdb/css/mdb.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"
+        integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Your custom styles (optional) -->
     <link href="https://cdn.jsdelivr.net/gh/hisyamasr/assets_cdn@v.1.2/mdb/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+        integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         html,
@@ -67,15 +82,15 @@
         }
 
         #status {
-            width: 200px;
-            height: 200px;
+            width: 500px;
+            height: 500px;
             position: absolute;
             left: 50%;
             top: 50%;
-            background-image: url(preloader.gif);
+            background-image: url(logo.png);
             background-repeat: no-repeat;
             background-position: center;
-            margin: -100px 0 0 -100px;
+            margin: -250px 0 0 -250px;
         }
 
         .h1_name {
@@ -280,9 +295,10 @@
     <header>
 
         <!-- Navbar -->
-        <nav class="indigo navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <nav class="black navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container">
-                <a class="navbar-brand" href="#"><img height="30px" width="30px" src="logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="#"><img height="30px" width="30px" src="LOGO-HBSA-BLACK.png"
+                        alt="logo"></a>
                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_1"
                     aria-controls="navbar_1" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -303,9 +319,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#skills" data-offset="75">Skills</a>
                         </li>
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="#works" data-offset="100">Works</a>
-                        </li> -->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact" data-offset="100">Contact</a>
                         </li>
@@ -330,20 +346,24 @@
         </nav>
 
         <!-- Intro Section -->
-        <div id="home" class="view jarallax_home" data-jarallax='{"speed": 0.2}'
-            style="background-image: url('https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div id="home" class="view jarallax_home" data-jarallax='{"speed": 0.2}'>
             <div class="mask morpheus-den-gradient">
                 <div class="container h-100 d-flex justify-content-center align-items-center">
                     <div class="row smooth-scroll">
-                        <div class="col-md-12 pt-3">
-                            <div class="white-text text-center pt-5 animated flipInX slower delay-2s">
+                        <div class="col-md-12">
+                            <div class="white-text text-center animated fadeIn slower delay-2s">
+                                <h1 class="text-center">
+                                    <img class="img-thumbnail rounded-circle mx-auto" style="width: 2.5em"
+                                        src="assets/foto-1.jpeg" alt="Profile Picture">
+                                </h1>
                                 <h1
-                                    class="h1_name slower text-capitalize text-monospace font-weight-bold view overlay display-2 mb-4 wow fadeIn">
+                                    class="h1-responsive slower text-capitalize text-monospace font-weight-bold  display-2 mb-4 wow fadeIn">
                                     <strong>Hisyam</strong>
                                 </h1>
-                                <h5 class="text-uppercase font-weight-bold wow fadeIn" data-wow-delay="0.4s">
-                                    <mark>Web-Apps
-                                        developer & that's it</mark></h5>
+                                <h5 class="text-uppercase font-weight-bold wow fadeIn h5-responsive"
+                                    data-wow-delay="0.4s">
+                                    <mark>System Enthusiasts & that's it</mark>
+                                </h5>
                                 <a href="#about" class="btn btn-floating btn-unique btn-large wow fadeIn"
                                     data-wow-delay="0.4s" data-offset="100"><i class="fas fa-angle-down"
                                         aria-hidden="true"></i></a>
@@ -369,19 +389,34 @@
                 <!-- Section title -->
                 <h2 class="text-center text-uppercase mt-5 pt-0 wow fadeIn" data-wow-duration="3s"
                     data-wow-delay="0.2s">About
-                    <strong>me</strong></h2>
+                    <strong>me</strong>
+                </h2>
+                <hr>
+                <div class="row text-center mx-auto wow fadeIn mb-5" data-wow-duration="3s" data-wow-delay="0.2s">
+                    <div class="col">
+                        <p>
+                            Seniman yang otaknya suka ngelamun; <br>
+                            Selalu belajar hal baru; <br>
+                            Selagi diberi waktu; <br>
+                            Semua akan menjadi yang kau mau;
+                        </p>
+                    </div>
+                    <div class="col">
+                        In the silence of the night, it seeks; <br>
+                        Knowledge and wisdom, it forever speaks; <br>
+                        With every dawn, a new path it meets; <br>
+                        Guided by passion, it never retreats;
+                    </div>
+                </div>
 
-                <p class="text-center w-responsive mx-auto wow fadeIn mb-5" data-wow-duration="3s"
-                    data-wow-delay="0.2s">Seniman yang otaknya tidak pernah diam <br> selalu belajar hal baru <br>
-                    selagi
-                    diberi
-                    waktu dan mau. <br> <strong>semua akan menjadi <i>Bisa</i></strong> </p>
+                <hr>
+
 
                 <!-- First row -->
                 <div class="card-deck features-big text-center">
 
                     <!-- First column -->
-                    <div class="card col-md-4 mb-5 wow zoomIn" data-wow-duration="3s" data-wow-delay="0.4s">
+                    <div class="cards col-12 col-md-4 mb-5 wow zoomIn" data-wow-duration="3s" data-wow-delay="0.4s">
 
                         <!--Panel-->
                         <div class=" card-body rgba-red-slight">
@@ -398,7 +433,7 @@
                     <!-- /First column -->
 
                     <!-- Second column -->
-                    <div class="card col-md-4 mb-5 wow zoomIn" data-wow-duration="3s" data-wow-delay="0.6s">
+                    <div class="cards col-12 col-md-4 mb-5 wow zoomIn" data-wow-duration="3s" data-wow-delay="0.6s">
 
                         <!--Panel-->
                         <div class=" card-body rgba-green-slight">
@@ -413,7 +448,7 @@
                     <!-- /.Second column -->
 
                     <!-- Third column -->
-                    <div class="card col-md-4 mb-5 wow zoomIn" data-wow-duration="3s" data-wow-delay="0.8s">
+                    <div class="cards col-12 col-md-4 mb-5 wow zoomIn" data-wow-duration="3s" data-wow-delay="0.8s">
 
                         <!--Panel-->
                         <div class=" card-body rgba-blue-slight">
@@ -557,82 +592,237 @@
 
             </div>
         </div>
-        <!--/Second container-->
+
+        <style>
+            .parallax {
+                /* The image used */
+                background-image: url('https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+
+                /* Full height */
+                height: 100%;
+
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                /* Center and scale the image nicely */
+                /* display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center; */
+                /* color: white; */
+                /* opacity: 0.5; */
+
+                /* Add overlay */
+                position: relative;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                /* Adjust the opacity as needed */
+            }
+        </style>
+
+
+        <div class="parallax" id="works">
+            <!-- Overlay -->
+            <div class="overlay"></div>
+            <div class="text-center white-text smooth-scroll mx-4 thumbnail-projects-detail">
+                <div class="container text-white py-3">
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="h1-responsive font-weight-bold text-white">CURRENT PROJECTS</h1>
+                            </div>
+                        </div>
+                        <div class=" row mb-4">
+                            <div class="col-8 offset-2 text-light">
+                                KLIK GAMBAR UNTUK DETAIL
+                                <a target="_blank" href="https://hisyambsa.my.canva.site/portofolio" class=""
+                                    data-iframe="true" id="open-portofolio-apps-len-telko" data-src=""
+                                    data-iframe-title="Portofolio apps.len-telko.co.id">
+                                    <img class="mb-2 img-thumbnail" loading="lazy"
+                                        src="assets/portofolio/APPS-LEN-TELKO/3.png" alt="porto-apps-len-telko">
+                                </a>
+                                <br>
+                                <span class="text-light">
+                                    ENTEPRISE SYSTEM
+                                    <br>
+                                    apps.len-telko.co.id
+                                    <br>
+                                    2020
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-primary">
+                                <a href="assets/portofolio/portofolio/1.png" data-lightbox="porto"
+                                    data-title="CURRENT PROJECT 2 - COMPANY PROFILE" class="" data-iframe="true"
+                                    id="porto-company-profile"
+                                    data-src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGB5YMNVhE&#x2F;_bf2RNiR8RQED7iETwTYcQ&#x2F;view?embed"
+                                    data-iframe-title="Portofolio apps.len-telko.co.id">
+                                    <img src="assets/portofolio/portofolio/1.png"
+                                        class="mb-2 img-thumbnail img-responsive" data-title="My caption" loading="lazy"
+                                        alt="porto-apps-len-telko">
+                                </a>
+                                <br>
+                                <span class="text-light">
+                                    COMPANY PROFILE
+                                    <br>
+                                    len-telko.co.id
+                                    <br>
+                                    2019
+                                </span>
+                            </div>
+                            <div class="col-6 text-primary">
+                                <a href="assets/portofolio/portofolio/2.png" data-lightbox="porto"
+                                    data-title="CURRENT PROJECT 3 - SUPPORT APROM" class="" data-iframe="true"
+                                    id="porto-prom">
+                                    <img src="assets/portofolio/portofolio/2.png"
+                                        class="mb-2 img-thumbnail img-responsive" loading="lazy"
+                                        alt="porto-apps-len-telko">
+                                </a>
+                                <br>
+                                <span class="text-light">
+                                    ANALYSIS & SUPPORT DASHBOARD
+                                    <br>
+                                    aprom.len-telko.co.id
+                                    <br>
+                                    2023
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"
+                        integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css"
+                        integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer" />
+                </div>
+
+
+                <div class="container my-2">
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="h1-responsive font-weight-bold text-white">ARCHIVE PROJECTS</h1>
+                            </div>
+                        </div>
+
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <a href="assets/portofolio/portofolio/3.png" data-lightbox="porto-archive"
+                                    data-title="ARCHIVE PROJECT 1  - SILATURAHMI AKBAR" class="" data-iframe="true"
+                                    id="porto-silaturahmi-akbar">
+                                    <img class="mb-2 img-thumbnail img-responsive" loading="lazy"
+                                        src="assets/portofolio/portofolio/3.png" alt="porto">
+                                </a>
+                                <span class="text-light">
+                                    SILAHTURAHMI AKBAR
+                                    <br>
+                                    Rabithah Alawiyah
+                                    <br>
+                                    DESEMBER 2019
+                                </span>
+                            </div>
+                            <div class="item">
+                                <a href="assets/portofolio/portofolio/4.png" data-lightbox="porto-archive"
+                                    data-title="ARCHIVE PROJECT 2  - ID CARD ANGGOTA" class="" id="porto-id-card">
+                                    <img class="mb-2 img-thumbnail img-responsive" loading="lazy"
+                                        src="assets/portofolio/portofolio/4.png" alt="porto">
+                                </a>
+                                <span class="text-light">
+                                    ID CARD ANGGOTA
+                                    <br>
+                                    pemudarabithah.org
+                                    <br>
+                                    2020
+                                </span>
+                            </div>
+                            <div class="item">
+                                <a href="assets/portofolio/portofolio/5.png" data-lightbox="porto-archive"
+                                    data-title="ARCHIVE PROJECT 3  - TPU PONDOK RAJEG" class="" id="porto-tpu">
+                                    <img class="mb-2 img-thumbnail img-responsive" loading="lazy"
+                                        src="assets/portofolio/portofolio/5.png" alt="porto">
+                                </a>
+                                <span class="text-light">
+                                    TPU PONDOK RAJEG DEPOK
+                                    <br>
+                                    Project Semester 5
+                                    <br>
+                                    2018
+                                </span>
+                            </div>
+                            <div class="item">
+                                <a href="assets/portofolio/portofolio/6.png" data-lightbox="porto-archive"
+                                    data-title="ARCHIVE PROJECT 4  - LAUNDRY KITA" class="" id="porto-tpu">
+                                    <img class="mb-2 img-thumbnail img-responsive" loading="lazy"
+                                        src="assets/portofolio/portofolio/6.png" alt="porto">
+                                </a>
+                                <span class="text-light">
+                                    LAUNDRY KITA
+                                    <br>
+                                    APLIKASI DESKTOP VB6
+                                    <br>
+                                    2017
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"
+                        integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css"
+                        integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer" />
+                </div>
+            </div>
+        </div>
+
+
 
         <!-- Third container -->
-        <div class="container">
-
-            <!-- Section About -->
-            <section class="section feature-box my-5 pb-5">
-
-                <!-- Section title -->
-                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-duration="3s"
-                    data-wow-delay="0.2s">Proses pengembangan Aplikasi</strong></h2>
-                <p class="text-justify w-responsive mx-auto wow fadeIn my-5" data-wow-duration="3s"
-                    data-wow-delay="0.2s"> Banyak jenis tahapan untuk proses pengembangan aplikasi. Jenis tahapan
-                    juga tergantung dari aplikasi yang akan dibuat. Tahapan berikut adalah yang biasa saya gunakan dan
-                    yang paling sederhana. </p>
-
-                <!-- Nav tabs -->
-                <ul class="nav md-tabs nav-justified indigo" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">Analisa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Desain</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">Implementasi</a>
-                    </li>
-                </ul>
-                <!-- Tab panels -->
-                <div class="tab-content card text-justify">
-                    <!--Panel 1-->
-                    <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
-                        <br>
-                        <div class="row mt-2">
-                            <div class="col-2 text-center"> <i class="fas fa-search fa-3x mb-1 grey-text"
-                                    aria-hidden="true"></i> </div>
-                            <div class="col-9 mb-2">
-                                <p class="dark-grey-text">Analisa kebutuhan pengguna. meliputi jenis server yang
-                                    digunakan, fitur aplikasi, biaya yang dikeluarkan hingga pemeliharaannya
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.Panel 1-->
-
-                    <!--Panel 2-->
-                    <div class="tab-pane fade" id="panel2" role="tabpanel">
-                        <br>
-                        <div class="row mt-2">
-                            <div class="col-2 text-center"> <i class="fas fa-pencil-alt fa-3x mb-1 grey-text"
-                                    aria-hidden="true"></i> </div>
-                            <div class="col-9 mb-2">
-                                <p class="dark-grey-text">Desain aplikasi adalah tahapan melihat aplikasi yang akan
-                                    digunakan pengguna. Desain dapat terdiri mockup atau prototype langsung dalam bentuk
-                                    aplikasi</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.Panel 2-->
-
-                    <!--Panel 3-->
-                    <div class="tab-pane fade" id="panel3" role="tabpanel">
-                        <br>
-                        <div class="row mt-2">
-                            <div class="col-2 text-center"> <i class="fas fa-code fa-3x mb-1 grey-text"
-                                    aria-hidden="true"></i> </div>
-                            <div class="col-9 mb-2">
-                                <p class="dark-grey-text">Tahapan ini adalah membangun aplikasi sesuai dengan desain dan
-                                    kebutuhan pengguna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.Panel 3-->
+        <div class="container my-5">
+            <div class="">
+                <h2 class="h2-responsive text-center">REFRENSI DAN LITERATUR</h2>
+                <div class="">
+                    <ul>
+                        <li>
+                            <a target="_blank"
+                                href="https://drive.google.com/file/d/1fMUN2A8TNurq578oZFpuatcrfWOQVfU_/view?usp=sharing">JURNAL
+                                TPU
+                                PONDOK RAJEG
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://drive.google.com/file/d/1GBLlWK3MjSdTjAFhCWP7rhlIFdHtvXno/view?usp=sharing">
+                                PKM MOBILE SPORT
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://www.figma.com/proto/wNtDJmks8k0Qd2U0DDQ9z0/APPS-LENTELKO?node-id=1-2&starting-point-node-id=1%3A2">
+                                DESAIN apps.len-telko with Figma
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- /.Tab panels -->
-            </section>
+            </div>
+            <!-- Section About -->
+
             <!-- /.Section -->
 
         </div>
@@ -657,122 +847,6 @@
         </div>
         <!-- /.Streak -->
 
-        <!-- Fourth container -->
-        <div class="container d-none">
-
-            <!-- Fourth section -->
-            <section id="works" class="section mb-5">
-
-                <!-- Section title -->
-                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-duration="3s"
-                    data-wow-delay="0.2s">My
-                    <strong>projects</strong></h2>
-
-                <!-- Section description -->
-                <p class="text-center w-responsive mx-auto wow fadeIn my-5">Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Quia iste provident, voluptatum voluptatibus aut modi aspernatur autem impedit,
-                    eius, debitis earum voluptatem. Quaerat hic aspernatur laborum magni earum. At, officiis!</p>
-
-                <!-- First row -->
-                <div class="row wow fadeIn" data-wow-duration="3s" data-wow-delay="0.4s">
-
-                    <!-- First column -->
-                    <div class="col-md-12 mb-5">
-
-                        <!-- Lightbox -->
-                        <div id="mdb-lightbox-ui"></div>
-
-                        <div class="mdb-lightbox">
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(63).jpg"
-                                    data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(63).jpg"
-                                        class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(66).jpg"
-                                    data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(66).jpg"
-                                        class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(65).jpg"
-                                    data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(65).jpg"
-                                        class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(67).jpg"
-                                    data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                        class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(68).jpg"
-                                    data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(68).jpg"
-                                        class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(64).jpg"
-                                    data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(64).jpg"
-                                        class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(69).jpg"
-                                    data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(69).jpg"
-                                        class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(59).jpg"
-                                    data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(59).jpg"
-                                        class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(70).jpg"
-                                    data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(70).jpg"
-                                        class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                        </div>
-                        <!-- /.Lightbox -->
-
-                    </div>
-                    <!-- /.First column -->
-
-                </div>
-                <!-- /.First row -->
-
-            </section>
-            <!-- /.Fourth section -->
-
-            <hr>
-
-        </div>
-        <!-- /.Fourth container -->
-
         <div class="streak1" id="contact">
             <div class="flex-center">
                 <ul class="list-unstyled">
@@ -789,8 +863,13 @@
         </div>
 
         <!-- /.Customers carousel -->
-
-        <div id="instagram-feed-demo" class="instagram_feed"></div>
+        <div class="text-center my-3">
+            MY CONTRIBUTIONS IN GITHUB
+            <br>
+            <img class="img-responsive" src="https://ghchart.rshah.org/hisyambsa" alt="hisyambsa's Github chart" />
+        </div>
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-b5498add-7f66-4903-a4d7-4b0b2ac6a631" data-elfsight-app-lazy></div>
 
     </main>
     <!--/Main layout-->
@@ -816,7 +895,7 @@
             <li class="nav-item"><a class="nav-link" href="#home"><span></span></a></li>
             <li class="nav-item"><a class="nav-link" href="#about"><span></span></a></li>
             <li class="nav-item"><a class="nav-link" href="#skills"><span></span></a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#works"><span></span></a></li> -->
+            <li class="nav-item"><a class="nav-link" href="#works"><span></span></a></li>
             <li class="nav-item"><a class="nav-link" href="#contact"><span></span></a></li>
         </ul>
     </div>
@@ -841,35 +920,15 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/lax.js"></script>
 
+    <script defer src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.instagramFeed/1.3.2/jquery.instagramFeed.min.js"
-        integrity="sha512-7+cVVK7693lmrtJI3RN/n/n3zo1sG9HG/pzkRSlroGUlHy3iaFJ2lGVGdnWO4MS5IMC2u57TEpSXgvEe6iCeYA=="
-        crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
-    <script>
-        (function ($) {
-            $(window).on('load', function () {
-                $.instagramFeed({
-                    'username': 'hisyambsa',
-                    'container': "#instagram-feed-demo",
-                    'display_profile': true,
-                    'display_biography': true,
-                    'display_gallery': true,
-                    'callback': null,
-                    'styling': true,
-                    'items': 9,
-                    'items_per_row': 3,
-                    'margin': 0,
-                    'lazy_load': true,
-                    'on_error': console.error
-                });
-            });
-        })(jQuery);
-    </script>
-
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"
+        integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script defer>
 
@@ -886,6 +945,45 @@
     </script>
     <script>
         $(document).ready(function () {
+
+            lightGallery(document.getElementById('open-portofolio-apps'), {
+                selector: 'this',
+            });
+            lightGallery(document.getElementById('open-pdf-jurnal'), {
+                selector: 'this',
+            });
+
+
+
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
+
+            // var image = document.getElementsByClassName('parallax');
+            // new simpleParallax(image, {
+            //     scale: 1.5,
+            //     overflow: true
+            // });
+
+
+            document.querySelector('script[data-use-service-core]').addEventListener('load', function () {
+                // Menyembunyikan elemen setelah skrip ElfSight selesai dimuat
+                document.getElementById('elfsight-widget').style.display = 'none';
+            });
+
             $('.first-button').on('click', function () {
 
                 $('.animated-icon1').toggleClass('open');
